@@ -1,0 +1,39 @@
+<head>
+	   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style type="text/css">
+  body{
+    background-image: url('http://forums.eidosgames.com/images/custom/h6_background.jpg');
+  }
+</style>
+</head>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+<div align="center" style="color:white">
+<h5>Are you sure you want your post to look like this?</h5>
+</br>
+
+ <strong>Title:</strong>
+  <%= @post.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<h6>You can still
+<%= link_to 'Edit', edit_post_path(@post) %> it </h6>
+<h6>If all it's as you want you can go
+<%= link_to 'Back', posts_path %> </h6>
+</div>
+
+

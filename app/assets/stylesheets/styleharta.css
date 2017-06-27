@@ -1,0 +1,35 @@
+.p {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+
+.map svg {
+  height: auto;
+  width: 79%;
+  margin: 0 auto;
+  display: block;
+}
+
+.map g {
+  fill: black;
+  stroke: white;
+  stroke-width: 1;
+}
+
+.map g:hover {
+  fill: #fc0 !important;
+  cursor: help;
+}
+
+.backk{
+
+  background-color: teal;
+}
+
+
+
+
+
+
+

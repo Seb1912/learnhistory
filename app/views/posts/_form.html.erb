@@ -1,0 +1,63 @@
+<html>
+<head>
+<style type="text/css">
+  body{
+    background-image: url('http://forums.eidosgames.com/images/custom/h6_background.jpg');
+  }
+</style>
+</head>
+<body>
+
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+<form class="col s12" align="center">
+  <div class="row">
+  <div class="input-field col s4">
+      
+    </div>
+  <div class="input-field col s4 white-text">
+    <%= f.label :title %><br>
+    <%= f.text_field :name %>
+  </div>
+  </div>
+
+  </br>
+   
+ <div class="row">
+ <div class="input-field col s3">
+      
+    </div>
+  <div class="input-field col s6 white-text">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  </div>
+
+  
+  
+
+
+
+<div class="actions">
+<%= f.submit %>
+</div>
+</form>
+<% end %>
+
+
+
+</body>
+</html>

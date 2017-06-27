@@ -1,0 +1,107 @@
+</!DOCTYPE html>
+<html>
+<head>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="assets/stylefor.css" type="text/css" rel="stylesheet">
+
+<script type="text/javascript">
+  
+  $(document).ready(function(){    
+    //Check if the current URL contains '#'
+    if(document.URL.indexOf("#")==-1){
+        // Set the URL to whatever it was plus "#".
+        url = document.URL+"#";
+        location = "#";
+
+        //Reload the page
+        location.reload(true);
+    }
+});
+
+
+
+</script>
+
+</head>
+<body class="landing">
+<p id="notice"><%= notice %></p>
+
+<h4 align="center" style="color:white">Modern History Forum</h4>
+
+
+<!-- <table class="highlight">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= current_user.email %> </td>
+        <td><%= post.name %></td>
+        <td><%= post.content %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> -->
+<div class="row">
+<% @posts.each do |post| %>
+
+        <div class="col s12 m4 responsive">
+         <div class="card transparent" id="box">
+            <div class="card-content white-text">
+              <span class="card-title"><%= post.name %></span>
+              <p><%= post.content %></p>
+            </div>
+            <div class="card-action" id="but">
+              <%= link_to 'Edit', edit_post_path(post) %>
+              <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
+        </div>
+      
+<% end %>
+</div>
+
+
+
+<!--<div class="waves-effect waves btn cyan">  
+<%= link_to 'New Post', new_post_path %> 
+</div>-->
+
+<!--<div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large cyan pulse" href="http://localhost:3000/lh/map">
+      <i class="large material-icons">reply</i></a>
+    
+  </div>-->
+
+
+<div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large cyan pulse">
+      <i class="large material-icons">dashboard</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red" href="http://localhost:3000/lh/map"><i class="material-icons">reply</i></a></li>
+      <li><a class="btn-floating green" href="http://localhost:3000/posts/new"><i class="material-icons">forum</i></a></li>
+      
+    </ul>
+  </div>
+
+
+
+
+
+
+<script type="text/javascript" src="assets/materialize.js"></script>
+<script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+.box{
+
+	
+	margin-left: 24%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    color:white;
+}
+
+.landing{
+
+	background-image: url("http://www.planwallpaper.com/static/images/824183-green-wallpaper.jpg");
+	/*background: #403A3E;  
+	background: -webkit-linear-gradient(to top, #F3470E, #080200); 
+	background: linear-gradient(to top, #F3470E, #080200);*/
+
+
+}
+
+.fonts{
+
+	font-family: "Courier New", Courier, monospace;	
+	color: white;
+
+}
+
+.devise-links a {
+  color: white;
+  font-size: 1em;
+}
+

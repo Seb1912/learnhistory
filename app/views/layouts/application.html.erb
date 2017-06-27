@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn History</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+
+    
+</head>
+<body>
+
+
+  <% if user_signed_in? %>
+  
+
+
+ <nav>
+    <div class="nav-wrapper black">
+      <a class="brand-logo right gray-text">Learn History</a>
+      
+      <div class="btn black button-collapse" data-activates="slide-out"> <i class="material-icons">menu</i></div>
+      <div class="waves-effect waves btn black">	
+<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+
+</div>
+	
+  <div class="waves-effect waves btn black">
+<% if current_user.admin == true %>
+<%= link_to "Admin Panel", "/admin" %>
+<% end %>
+</div>
+	
+    </div>
+</nav>
+
+
+
+<ul id="slide-out" class="side-nav">
+        <li><div class="userView">
+            <img class="background" src="http://ministryadvice.com/wp-content/uploads/2016/10/motionworship-300x170.png">
+            <a href="https://www.facebook.com/sebteo19"><img class="circle" src="https://image.ibb.co/m4NToQ/sebfb.jpg"></a>
+            <a><span class="white-text name">Sebastian Teodorescu</span></a>
+            <a><span class="white-text email"><%= current_user.email %></span></a>
+        </div></li>
+        <li><a href="#!"><i class="material-icons">person_pin</i><%= current_user.sign_in_count %>th time online</a></li>
+        <li><a href="#!"><i class="material-icons">cloud</i>Logged in via: <%= current_user.provider %></a></li>
+        <li><a href="#!"><i class="material-icons">query_builder</i>Last seen: <%= current_user.last_sign_in_at %></a></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+<% end %> 
+
+
+
+<%= yield %>
+
+
+
+
+</body>
+</html>
+
+

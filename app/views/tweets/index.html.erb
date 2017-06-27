@@ -1,0 +1,33 @@
+<head>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<p id="notice"><%= notice %></p>
+
+<h5>Post your tweets</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tweets.each do |tweet| %>
+      <tr>
+        <td><%= current_user.email  %> </td>
+        <td><%= tweet.content %></td>
+         <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
+        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to 'New Tweet', new_tweet_path %>

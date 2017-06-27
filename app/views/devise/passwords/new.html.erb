@@ -1,0 +1,36 @@
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<div align="center">
+<h2>Forgot your password?</h2>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="row">
+ <form class="col s12" align="center">
+      <div class="row">
+      <div class="input-field col s4">
+      
+    </div>
+        <div class="input-field col s4">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+        </div>
+        <div class="row">
+        
+        <a class="waves-effect waves-light btn cyan">
+    <%= f.submit "Send me reset password instructions" %>
+  </a>
+<div align="center">
+<%= link_to 'Go Back', url_for("http://localhost:3000/") %></div>
+  <div align="center"><%= render "devise/shared/links" %></div>
+
+<% end %>
+</div>
+</form>
+</div>
+</div>
+

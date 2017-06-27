@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="assets/stylehome.css" type="text/css" rel="stylesheet">
+  
+</head>
+<body class="landing">
+</br>
+</br>
+
+<div align="center" class="box">
+<h2 class="fonts">Learn History</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="row">
+ <form class="col s12" align="center">
+      <div class="row">
+      <div class="input-field col s4">
+      
+    </div>
+        <div class="input-field col s4 white-text">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  
+</div>
+        </div>
+        <div class="row">
+        <div class="input-field col s4">
+      
+    </div>
+        <div class="input-field col s4">
+  
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+ 
+        </div>
+        </div>
+      
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+<a class="waves-effect waves-light btn cyan">
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div></a>
+</br>
+</br>
+<div align="center" class="devise-links">
+
+      <%= render "devise/shared/links" %>
+  </div>
+
+
+      
+      
+    </ul>
+  </div>
+
+<% end %>
+</form>
+</div>
+</div>
+
+
+</br>
+</br>
+</br>
+
+
+
+
+  <nav class="cyan" role="navigation">
+    <div class="nav-wrapper container" align="center">
+      <p>Wlecome to LearnHistory! If you want to learn more, why you just scroll down?</p>
+      </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    
+    <div class="parallax"><img src="http://societe-jersiaise.org/uploads/images/section/history-hero.jpg" alt="Unsplashed background img 5"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center cyan-text"><i class="material-icons">info</i></h2>
+            <h5 class="center white-text">About this website</h5>
+
+            <p class="light center white-text">It's just a good idea that deserves a try. Nowadays I noticed that people knowledge about history is so poor. Because of this I took initiative and created this website.
+            Here you can find out cool stuff about your countries past and also you can talk with other people from all over Europe and share information. I hope you'll find this website useful. Enjoy!</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center cyan-text"><i class="material-icons">info_outline</i></h2>
+            <h5 class="center white-text">How it works?</h5>
+
+            <p class="light center white-text">Simple. You have to create an account first. After that you'll be redirected to an old Europe map. From there you just have to click whatever country you want to learn more about.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center cyan-text"><i class="material-icons">email</i></h2>
+            <h5 class="center white-text">Have a suggestion? Contact us!</h5>
+
+            <p class="light center white-text">It is just a concept and it's pretty new, so I know things can go wrong and there is a lot to improve. If you want to help, you can send me an email at the adress learnhistoryapp@gmail.com. 
+            Thank you!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+      </div>
+    </div>
+    <div class="parallax"><img src="http://cs623730.vk.me/v623730214/3f487/fK9z6erh6Ws.jpg" alt="Unsplashed background img 6"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row white-text">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>It's time for the next step</h4>
+          <p class="left-align light center">You read all things below, I know you did and you have seen that all this site is about is not that hard. I fell your curiosity so why don't you scroll down until the end of the page and sign in? </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+      </div>
+    </div>
+    <div class="parallax"><img src="http://ww2today.com/wp-content/uploads/2015/02/churchill-roosevelt-stalin-at-Yalta.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer cyan center">
+    <div class="container center">
+      <div class="row center">
+        <div class="col l12 s12 center">
+          <h5 class="white-text center">SebWeb</h5>
+          <p class="grey-text text-lighten-4 center">I'm just a guy fond of IT and history. I thought that I might combine what I learned in college with my passion for history haveing the purpose of creating an active and pasionate community of people who loves history troughout Europe. Why just Europe? Because I was born here, of course. I'm from Romania and I'm also very excited to learn what others think or know about the history of Romania.</p>
+
+
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Copyright © SebWeb & Materialize/ Made with Ruby on Rails</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+</form>
+</div>
+</div>
+
+
+<div align="center" class="box">
+<h2 class="fonts">Login</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="row">
+ <form class="col s12" align="center">
+      <div class="row">
+      <div class="input-field col s4">
+      
+    </div>
+        <div class="input-field col s4">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  
+</div>
+        </div>
+        <div class="row">
+        <div class="input-field col s4">
+      
+    </div>
+        <div class="input-field col s4">
+  
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+ 
+        </div>
+        </div>
+      
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+<a class="waves-effect waves-light btn cyan">
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div></a>
+
+<div align="center" class="devise-links">
+
+      <%= render "devise/shared/links" %>
+  </div>
+
+
+      
+      
+    </ul>
+  </div>
+
+<% end %>
+
+</form>
+</div>
+</div>
+
+
+    
+<!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script>
+  <script src="assets/init.js"></script>
+  <script src="assets/javascripts/materialize.js"></script>
+  
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+.landing{
+
+	background-image: url("http://www.planwallpaper.com/static/images/824183-green-wallpaper.jpg");
+	/*background: #403A3E;  
+	background: -webkit-linear-gradient(to top, #F3470E, #080200); 
+	background: linear-gradient(to top, #F3470E, #080200);*/
+
+
+}
+
+#box{
+
+	box-shadow: 0 4px 8px 0 rgba(0,0,1,1);
+    border-radius: 5px;
+    
+}
+
+#but a{
+
+	color:white;
+}
+
