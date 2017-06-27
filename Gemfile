@@ -53,7 +53,9 @@ group :development do
 
   gem 'rails_admin'
 
-  
+  gem 'nokogiri'
+  gem 'rack', '~> 1.6.8'
+  gem 'rspec'
 
 
 
